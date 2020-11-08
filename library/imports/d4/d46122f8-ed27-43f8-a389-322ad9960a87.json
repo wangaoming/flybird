@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "bottom_pipe",
+    "texture": "2f6ba0d8-faf1-4c16-b9aa-488e9a299f0d",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      129,
+      801
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      129,
+      801
+    ]
+  }
+}
