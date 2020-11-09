@@ -4,15 +4,6 @@ cc._RF.push(module, '3bda5+urYlF5o99MacvVQNi', 'Game');
 
 'use strict';
 
-// Learn cc.Class:
-//  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/class.html
-//  - [English] http://www.cocos2d-x.org/docs/creator/en/scripting/class.html
-// Learn Attribute:
-//  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/reference/attributes.html
-//  - [English] http://www.cocos2d-x.org/docs/creator/en/scripting/reference/attributes.html
-// Learn life-cycle callbacks:
-//  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
-//  - [English] http://www.cocos2d-x.org/docs/creator/en/scripting/life-cycle-callbacks.html
 var Bird = require('Bird');
 var PipeManager = require('PipeManager');
 var Scroller = require('Scroller');
@@ -54,6 +45,16 @@ cc.Class({
         gameOverMenu: {
             default: null,
             type: cc.Node
+        },
+        // 得分音效
+        scoreAudio: {
+            default: null,
+            url: cc.AudioClip
+        },
+        // 按钮节点，点击浮现时的声音
+        swooshingAudio: {
+            default: null,
+            url: cc.AudioClip
         }
     },
 
@@ -155,22 +156,35 @@ cc.Class({
 
         // 决定是否显示奖牌
         var showMedal = function showMedal(err, spriteFrame) {
+            if (err) {
+                console.log("error:" + err);
+                return;
+            }
+
             medalNode.getComponent(cc.Sprite).spriteFrame = spriteFrame;
         };
         if (this.score >= this.goldScore) {
             // 显示金牌
+            console.log("金牌啦");
+            // medalNode.getComponent(cc.Sprite).spriteFrame = spriteFrame.getSpringFrame("medal_gold");
             cc.loader.loadRes("image/medal_gold.png/medal_gold", showMedal);
         } else if (this.score >= this.silverScore) {
             // 显示银牌
             cc.loader.loadRes("image/medal_silver.png/medal_silver", showMedal);
-        } else {
-            // 不显示奖牌
-            showMedal();
+            // medalNode.getComponent(cc.Sprite).spriteFrame = spriteFrame.getSpringFrame("medal_sliver");
         }
+        // else{
+        //     showMedal();
+        // }
+
+        // if(this.score > 0){
+        //     cc.loader.loadRes("image",cc.SpriteAtlas,showMedal)
+        // }
 
         // 依次显示各个节点
         var showNode = function showNode(node, action, callback) {
             startButtonNode.active = true;
+            cc.audioEngine.playEffect(_this2.swooshingAudio);
             node.runAction(cc.sequence(action, cc.callFunc(function () {
                 if (callback) {
                     callback();
@@ -190,6 +204,7 @@ cc.Class({
     gainScore: function gainScore() {
         this.score++;
         this.scoreLabel.string = this.score;
+        cc.audioEngine.playEffect(this.scoreAudio);
     },
 
     /** 点击游戏结束菜单中的重新开始游戏按钮会调用此方法 */
@@ -199,6 +214,7 @@ cc.Class({
             // 重新加载场景
             cc.director.loadScene('game');
         }, this)));
+        cc.audioEngine.playEffect(this.swooshingAudio);
     }
 }
 // update (dt) {},

@@ -256,8 +256,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 500,
-      "y": -359
+      "x": -3,
+      "y": -434
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -658,11 +658,11 @@
       "__id__": 15
     },
     "_enabled": true,
-    "swooshingAudio": {
-      "__uuid__": "12f95b7b-5329-4fc0-8b8e-934a6ef63cf0"
-    },
     "maskLayer": {
       "__id__": 20
+    },
+    "swooshingAudio": {
+      "__uuid__": "12f95b7b-5329-4fc0-8b8e-934a6ef63cf0"
     }
   },
   {

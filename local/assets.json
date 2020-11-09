@@ -5,7 +5,7 @@
       "id": "mount-assets"
     },
     {
-      "folded": false,
+      "folded": true,
       "id": "244c4f65-bb17-4c71-af76-11dd4bc04376"
     },
     {
@@ -17,16 +17,16 @@
       "id": "572dcd08-2d3c-4be6-8d04-b1cdb408bb0c"
     },
     {
-      "folded": false,
+      "folded": true,
       "id": "f0b53b6e-7833-4ae3-8c80-c5fa890b0953"
     },
     {
       "folded": true,
-      "id": "78c97a37-e594-41b4-9f49-3db38ad12c01"
+      "id": "ad2c9eeb-1003-4241-9f27-1df372b98a5f"
     },
     {
-      "folded": true,
-      "id": "ad2c9eeb-1003-4241-9f27-1df372b98a5f"
+      "folded": false,
+      "id": "78c97a37-e594-41b4-9f49-3db38ad12c01"
     },
     {
       "folded": false,
@@ -50,19 +50,19 @@
     },
     {
       "folded": true,
-      "id": "a1bc2ea9-bcd6-4407-b691-b41c19d56e71"
-    },
-    {
-      "folded": true,
       "id": "60eb5050-f5a4-49ce-af26-74a6bfdf345c"
     },
     {
       "folded": true,
-      "id": "bfb2023e-ab30-4f7d-9337-ece99163555a"
+      "id": "1b57facb-b985-4d8c-aa1c-acc775f5ad61"
     },
     {
       "folded": true,
-      "id": "1b57facb-b985-4d8c-aa1c-acc775f5ad61"
+      "id": "a1bc2ea9-bcd6-4407-b691-b41c19d56e71"
+    },
+    {
+      "folded": true,
+      "id": "bfb2023e-ab30-4f7d-9337-ece99163555a"
     },
     {
       "folded": true,
@@ -74,7 +74,7 @@
     },
     {
       "folded": true,
-      "id": "a08f1e0c-35c3-4c01-bd74-6948e255f5ee"
+      "id": "e86c8a2e-be50-42d1-a551-46b062afde52"
     },
     {
       "folded": true,
@@ -82,14 +82,14 @@
     },
     {
       "folded": true,
-      "id": "e86c8a2e-be50-42d1-a551-46b062afde52"
+      "id": "a08f1e0c-35c3-4c01-bd74-6948e255f5ee"
     },
     {
       "folded": true,
       "id": "fe139541-1069-4c86-9b3b-76879343dbd1"
     },
     {
-      "folded": true,
+      "folded": false,
       "id": "052bf0cd-67bf-48c2-ab68-4a333387a2fa"
     },
     {
@@ -97,7 +97,7 @@
       "id": "2f6ba0d8-faf1-4c16-b9aa-488e9a299f0d"
     },
     {
-      "folded": true,
+      "folded": false,
       "id": "4417e609-5cba-4a4c-830a-05a86487050b"
     },
     {

@@ -48,7 +48,7 @@
     "_globalZOrder": 0,
     "_opacityModifyRGB": false,
     "groupIndex": 0,
-    "autoReleaseAssets": false
+    "autoReleaseAssets": null
   },
   {
     "__type__": "cc.Node",
@@ -418,6 +418,12 @@
     "state": 0,
     "ground": {
       "__id__": 13
+    },
+    "riseAudio": {
+      "__uuid__": "3997d734-ac86-4ddb-ae2b-490ba07de9ba"
+    },
+    "dropAudio": {
+      "__uuid__": "503a369b-9358-4568-9080-435164558b26"
     }
   },
   {
@@ -465,7 +471,7 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 500,
+      "x": 20,
       "y": -359
     },
     "_skewX": 0,
@@ -1503,6 +1509,9 @@
     },
     "gameOverMenu": {
       "__id__": 24
+    },
+    "swooshingAudio": {
+      "__uuid__": "12f95b7b-5329-4fc0-8b8e-934a6ef63cf0"
     }
   },
   {

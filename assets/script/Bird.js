@@ -33,6 +33,21 @@ cc.Class({
             default: null,
             type: cc.Node
         },
+        // 小鸟向上飞的声音
+        riseAudio:{
+            default:null,
+            url:cc.AudioClip
+        },
+        // 碰掉水管掉落声
+        dropAudio:{
+            default:null,
+            url:cc.AudioClip
+        },
+        // 发生碰撞声
+        hitAudio:{
+            default:null,
+            url:cc.AudioClip
+        },
     },
 
     init(game) {
@@ -73,6 +88,9 @@ cc.Class({
                 if (this.currentSpeed < 0) {
                     this.state = State.FreeFall;
                     this._runFallAction();
+                    this._runRiseAction();
+        cc.audioEngine.playEffect(this.dropAudio)
+
                 }
                 break;
         }
@@ -82,6 +100,9 @@ cc.Class({
         this.state = State.Rise;
         this.currentSpeed = this.initRiseSpeed;
         this._runRiseAction();
+        //
+        cc.audioEngine.playEffect(this.riseAudio)
+    
     },
     //开始起飞
     startFly() {
@@ -136,6 +157,8 @@ cc.Class({
         }
         // 处理碰撞结果
         if (collideWithPipe || collideWithGround) {
+        cc.audioEngine.playEffect(this.hitAudio)
+
             if (collideWithGround) { // 与地面碰撞
                 this.state = State.Dead;
             } else { // 与水管碰撞
@@ -152,6 +175,10 @@ cc.Class({
                 this.game.gainScore();
                 this._getNextPipe();
             }
+        }
+        // 处理碰撞结果
+        if(collideWithPipe || collideWithGround){
+            cc.audioEngine.playEffect(this.hitAudio)
         }
     },
     _detectCollisionWithBird(otherNode) {

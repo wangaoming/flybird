@@ -12,8 +12,11 @@ cc.Class({
         maskLayer: {
             default: null,
             type: cc.Node
+        },
+        swooshingAudio: {
+            default: null,
+            url: cc.AudioClip
         }
-
     },
 
     startGame: function startGame() {
@@ -25,6 +28,8 @@ cc.Class({
             console.log('切换场景');
             cc.director.loadScene('game');
         }, this))); //运行一个action ，先让蒙版在0.2秒中逐渐显示出来，然后打印一个log
+        // 播放音效
+        cc.audioEngine.playEffect(this.swooshingAudio);
     }
 });
 

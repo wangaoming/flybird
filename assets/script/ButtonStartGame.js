@@ -7,7 +7,10 @@ cc.Class({
             default: null,
             type: cc.Node
         },
-
+             swooshingAudio:{
+                 default:null,
+                 url:cc.AudioClip
+             }
     },
 
     startGame() {
@@ -24,5 +27,7 @@ cc.Class({
                 }, this)
             )
         );//运行一个action ，先让蒙版在0.2秒中逐渐显示出来，然后打印一个log
+    // 播放音效
+    cc.audioEngine.playEffect(this.swooshingAudio)
     }
 });
